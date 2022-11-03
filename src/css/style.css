@@ -1,0 +1,388 @@
+/*
+  ===================
+    Table Of Contents
+  ===================
+      -  Google Fonts
+      1. Reset (minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css)
+      2. Custom Properties And Utility
+      3. Global Styles
+      4. Typography
+      5. Layout
+      6. Components
+        6.1 Button
+        6.2 Input
+      7. Media Queries
+*/
+
+/*
+  =================
+    - Google Fonts
+  =================
+        font-family: 'Poppins', sans-serif; 
+        400 500 600 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+  ==========
+    1. Reset
+  ==========
+*/
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select {
+  margin: 0
+}
+
+html {
+  box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+/*
+  ==================================
+    2. Custom Properties And Utility
+  ==================================
+*/
+:root {
+  --RED: hsl(0, 100%, 74%);
+  --GREEN: hsl(154, 59%, 51%);
+  --BLUE: hsl(248, 32%, 49%);
+  --DARK-BLUE: hsl(249, 10%, 26%);
+  --GRAYISH-BLUE: hsl(246, 25%, 77%);
+}
+
+.offscreen {
+  position: absolute;
+  left: -999999px;
+}
+
+/*
+  ==================
+    3. Global Styles
+  ==================
+*/
+body {
+  min-height: 100vh;
+  background: url('../images/bg-intro-mobile.png'), var(--RED);
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*
+  ===============
+    4. Typography
+  ===============
+*/
+.content-section-h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 55px;
+  color: white;
+}
+
+.content-section-p {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 27px;
+  color: white;
+}
+
+.try-container-p {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+  color: var(--DARK-BLUE);
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--GRAYISH-BLUE);
+}
+
+.sign-up-container-button {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  color: white;
+}
+
+.sign-up-container-p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--GRAYISH-BLUE);
+}
+
+.sign-up-container-p a {
+  color: var(--RED);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*
+  ===========
+    5. Layout
+  ===========
+*/
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-section {
+  margin: 5em 1.563em 3.125em 1.563em;
+}
+
+.content-section-h1 {
+  margin-bottom: 1.25em;
+}
+
+.try-container {
+  min-width: auto;
+  padding: 0.938em 3.125em;
+  margin: 0 1.563em 1.563em 1.563em;
+  border-radius: 10px;
+  box-shadow: 0 8px hsla(0, 0%, 0%, 0.2);
+  background-color: var(--BLUE);
+}
+
+.sign-up-container {
+  background-color: white;
+  padding: 1.563em;
+  margin: 0 1.563em 0 1.563em;
+  border-radius: 10px;
+  box-shadow: 0 8px hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 3.75em;
+}
+
+/*
+  ===============
+    6. Components
+  ===============
+      6.1 Button
+*/
+.sign-up-container-button {
+  width: 100%;
+  min-height: 3.125em;
+  background-color: var(--GREEN);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px hsl(154, 60%, 42%);
+  margin-bottom: 1.25em;
+}
+
+.sign-up-container-button:hover {
+  cursor: pointer;
+  background-color: hsl(154, 77%, 58%);
+}
+
+/*
+  ===============
+    6. Components
+  ===============
+      6.2 Input
+*/
+.sign-up-container input {
+  display: block;
+  width: 100%;
+  min-height: 3.75em;
+  margin-bottom: 1.25em;
+  padding-left: 1.25em;
+  border-radius: 10px;
+  border: 1px solid var(--GRAYISH-BLUE);
+  outline: none;
+}
+
+
+.sign-up-container input:focus {
+  border: 1px solid var(--DARK-BLUE);
+}
+
+form .feedback {
+  display: none;
+}
+
+.was-validated .form-input-name:valid~.invalid-feedback-name,
+.was-validated .form-input-last-name:valid~.invalid-feedback-last-name,
+.was-validated .form-input-email:valid~.invalid-feedback-email,
+.was-validated .form-input-password:valid~.invalid-feedback-password {
+  display: none;
+}
+
+.was-validated .form-input-name:invalid~.invalid-feedback-name,
+.was-validated .form-input-last-name:invalid~.invalid-feedback-last-name,
+.was-validated .form-input-email:invalid~.invalid-feedback-email,
+.was-validated .form-input-password:invalid~.invalid-feedback-password {
+  display: block;
+  margin-bottom: 0.938em;
+  margin-top: 0.313em;
+  text-align: end;
+  font-size: 0.75rem;
+  color: var(--RED);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.was-validated .form-input-name:invalid,
+.was-validated .form-input-last-name:invalid,
+.was-validated .form-input-email:invalid,
+.was-validated .form-input-password:invalid {
+  margin-bottom: 0;
+  background-image: url('../images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: right 1.563em center;
+  color: var(--RED);
+  border: 2px solid var(--RED);
+}
+
+/*
+  ==================
+    7. Media Queries
+  ==================
+*/
+@media screen and (max-width: 17.5em) {
+  main {
+    align-items: normal;
+  }
+
+  .sign-up-section {
+    min-width: 15em;
+  }
+
+  .try-container {
+    min-width: auto;
+    padding: 0.938em 3.125em;
+    margin: 0 1.563em 1.563em 1.563em;
+    border-radius: 10px;
+    box-shadow: 0 8px hsla(0, 0%, 0%, 0.2);
+    background-color: var(--BLUE);
+  }
+
+  .sign-up-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.25em;
+    padding-left: 1.25em;
+    border-radius: 10px;
+    border: 1px solid var(--GRAYISH-BLUE);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  body {
+    background: url('../images/bg-intro-desktop.png'), var(--RED);
+  }
+
+  main {
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 8.75em;
+  }
+
+  .content-section {
+    margin: 0 3.125em 0 0;
+  }
+
+  .try-container {
+    min-width: 34.375em;
+  }
+
+  .content-section-h1 {
+    font-size: 3rem;
+    text-align: start;
+  }
+
+  .content-section-p {
+    text-align: start;
+
+  }
+}
